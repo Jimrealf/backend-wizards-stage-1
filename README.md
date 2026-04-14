@@ -4,7 +4,7 @@ A REST API that aggregates name-based predictions from three external services (
 
 Extends the Stage 0 classify endpoint with data persistence, multi-API integration, and idempotency handling.
 
-**Live URL:** (pending deployment)
+**Live URL:** https://backend-wizards-stage-1.vercel.app
 
 ## Stack
 
