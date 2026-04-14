@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
-import classifyRouter from "./routes/classify";
-import profilesRouter from "./routes/profiles";
-import { errorHandler } from "./utils/errors";
+import classifyRouter from "./routes/classify.js";
+import profilesRouter from "./routes/profiles.js";
+import { errorHandler } from "./utils/errors.js";
 
 const app = express();
 

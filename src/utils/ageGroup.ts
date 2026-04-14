@@ -1,4 +1,4 @@
-import { AgeGroup } from "../types/api";
+import { AgeGroup } from "../types/api.js";
 
 export function classifyAgeGroup(age: number): AgeGroup {
   if (age <= 12) return "child";

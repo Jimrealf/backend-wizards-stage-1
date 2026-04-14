@@ -1,5 +1,5 @@
-import { NationalizeResponse } from "../types/api";
-import { fetchWithTimeout } from "../utils/fetchWithTimeout";
+import { NationalizeResponse } from "../types/api.js";
+import { fetchWithTimeout } from "../utils/fetchWithTimeout.js";
 
 const NATIONALIZE_BASE_URL = "https://api.nationalize.io";
 

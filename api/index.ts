@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "http";
-import { initSchema } from "../src/utils/db";
-import app from "../src/app";
+import { initSchema } from "../src/utils/db.js";
+import app from "../src/app.js";
 
 const ready = initSchema();
 

@@ -1,8 +1,8 @@
 import { Router, Request, Response } from "express";
-import { validateName } from "../utils/validation";
-import { fetchGenderPrediction } from "../services/genderize";
-import { notFound } from "../utils/errors";
-import { ApiSuccessResponse } from "../types/api";
+import { validateName } from "../utils/validation.js";
+import { fetchGenderPrediction } from "../services/genderize.js";
+import { notFound } from "../utils/errors.js";
+import { ApiSuccessResponse } from "../types/api.js";
 
 const MIN_PROBABILITY = 0.7;
 const MIN_SAMPLE_SIZE = 100;

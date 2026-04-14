@@ -1,4 +1,4 @@
-import { AppError, badGateway } from "./errors";
+import { AppError, badGateway } from "./errors.js";
 
 const TIMEOUT_MS = 5000;
 

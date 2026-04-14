@@ -1,5 +1,5 @@
-import { AgifyResponse } from "../types/api";
-import { fetchWithTimeout } from "../utils/fetchWithTimeout";
+import { AgifyResponse } from "../types/api.js";
+import { fetchWithTimeout } from "../utils/fetchWithTimeout.js";
 
 const AGIFY_BASE_URL = "https://api.agify.io";
 

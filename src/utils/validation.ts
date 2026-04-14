@@ -1,4 +1,4 @@
-import { badRequest, unprocessable } from "./errors";
+import { badRequest, unprocessable } from "./errors.js";
 
 export function validateName(raw: unknown): string {
   if (raw === undefined || raw === null) {

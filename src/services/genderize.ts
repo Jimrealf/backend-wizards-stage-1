@@ -1,5 +1,5 @@
-import { GenderizeResponse } from "../types/api";
-import { fetchWithTimeout } from "../utils/fetchWithTimeout";
+import { GenderizeResponse } from "../types/api.js";
+import { fetchWithTimeout } from "../utils/fetchWithTimeout.js";
 
 const GENDERIZE_BASE_URL = "https://api.genderize.io";
 

@@ -1,13 +1,13 @@
 import { Router, Request, Response } from "express";
 import { v7 as uuidv7 } from "uuid";
-import { validateName } from "../utils/validation";
-import { classifyAgeGroup } from "../utils/ageGroup";
-import { fetchGenderPrediction } from "../services/genderize";
-import { fetchAgePrediction } from "../services/agify";
-import { fetchNationalityPrediction } from "../services/nationalize";
-import { sql } from "../utils/db";
-import { badGateway, notFound } from "../utils/errors";
-import { ProfileData, ProfileListItem, ProfileSuccessResponse, ProfileListResponse } from "../types/api";
+import { validateName } from "../utils/validation.js";
+import { classifyAgeGroup } from "../utils/ageGroup.js";
+import { fetchGenderPrediction } from "../services/genderize.js";
+import { fetchAgePrediction } from "../services/agify.js";
+import { fetchNationalityPrediction } from "../services/nationalize.js";
+import { sql } from "../utils/db.js";
+import { badGateway, notFound } from "../utils/errors.js";
+import { ProfileData, ProfileListItem, ProfileSuccessResponse, ProfileListResponse } from "../types/api.js";
 
 const router = Router();
 
@@ -48,7 +48,8 @@ router.post("/", async (req: Request, res: Response) => {
   }
 
   const topCountry = nationalityResult.country.reduce((max, c) =>
-    c.probability > max.probability ? c : max
+    c.probability > max.probability ? c : max,
+    nationalityResult.country[0]
   );
 
   const profile: ProfileData = {
