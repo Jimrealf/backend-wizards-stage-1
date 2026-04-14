@@ -1,11 +1,13 @@
 import express from "express";
 import cors from "cors";
 import classifyRouter from "./routes/classify";
+import profilesRouter from "./routes/profiles";
 import { errorHandler } from "./utils/errors";
 
 const app = express();
 
 app.use(cors());
+app.use(express.json());
 
 app.use((req, _res, next) => {
   console.log(`${req.method} ${req.path}`, req.query);
@@ -17,6 +19,7 @@ app.get("/", (_req, res) => {
 });
 
 app.use("/api/classify", classifyRouter);
+app.use("/api/profiles", profilesRouter);
 
 app.use(errorHandler);
 

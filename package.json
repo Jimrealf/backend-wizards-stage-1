@@ -1,10 +1,10 @@
 {
-  "name": "hng-backend-stage-0",
-  "version": "1.0.0",
-  "description": "HNG Backend Wizards Stage 0 - Classify Name API",
+  "name": "hng-backend-stage-1",
+  "version": "2.0.0",
+  "description": "HNG Backend Wizards Stage 1 - Profile Aggregation API",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch --env-file=.env src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
@@ -12,12 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "postgres": "^3.4.9",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.6.0",
+    "@types/uuid": "^10.0.0",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2"
   }
